@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>로그인 기능</title>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: -20px 0 50px;
+}
+</style>
+</head>
+<body>
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+    <form action="#">
+<h1><a href="메인사이트링크">사이트 이름</a></h1>
+<form name="fo" method="get">
+<input type="text" size="15" placeholder="user ID"><br>
+<input type="password" size="15" placeholder="Password">
+<i class="fa fa-eye fa-lg"></i><br>
+<input type="checkbox">아이디 저장<br>
+<input type="submit" value="로그인" ><br><hr>
+"사이트 이름"이 처음이신가요? <a href="회원가입링크">회원가입<a>
+</form>
+</body>
+</html>
