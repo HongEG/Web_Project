@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: -20px 0 50px;
+
+  background-color: white;
+  
+
+}
+.main {
+    width: 250px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+.logo {
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+#login {
+    width: 100%;
+    background-color: pink;
+    border-color: transparent;
+    color: white;
+}
+.account {
+    display: block;
+    margin-bottom: 3px;
+    padding: 3px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+#alert {
+    border-color: transparent;
+}
+  </style>
+  </head>
+<body>
+    <div class="main">
+        <h1 class="logo"><a href="메인사이트링크">사이트이름</a></h1>
+        <div class="container">
+
+        <input type="text" placeholder="아이디" id="id" class="account">
+        <input type="password" placeholder="비밀번호" id="password" class="account">            
+        <input type="password" placeholder="비밀번호 확인" id="password" class="account">
+        <input type="text" placeholder="이름" id="id" class="account">
+        <input type="text" placeholder="이메일" id="id" class="account">
+        <input type="text" placeholder="휴대폰 번호 (01012345678)" id="id" class="account">
+        <i class="fa fa-eye fa-lg"></i><br>
+        <button id="login" class="account">회원가입</button>
+        <p id="alert" class="account"> </p>
+        </div>
+    </div>   
+</body>
+</html>
