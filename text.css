@@ -1,0 +1,111 @@
+*{
+    list-style:none;
+    text-decoration:none;
+    border-collapse:collapse;
+    margin:0px;
+    padding:0px;
+    color:#000;
+}
+
+header{
+	display:flex;
+	width:100vm;
+	margin-top:40px;
+	height:80px;
+}
+.Main_bg
+{
+    background-image:url("image/rp.png");
+		background-repeat: repeat;
+		width : 100vw;
+    height : 600px;
+		background:gray;
+		
+}
+
+.Main_icon{
+	width:500px;
+	line-height:80px;
+	background:white;
+	border:2px solid #F0F
+}
+
+.usAccount{
+	display:flex;
+	width:2060px;
+	justify-content:flex-end;
+	line-height:80px;
+	background:white;
+	border:2px solid #F0F
+}
+
+.usAccount > li {
+	margin-left:30px;
+	margin-right:30px;
+}
+
+.usAccount > form > li {
+	margin-left:30px;
+	margin-right:30px;
+}
+
+.usAccount > form > input{
+	border:none;
+	width:50px;
+	height:40px;
+	background:rgbas(0,0,0,0.0);
+	color:#fff;
+	padding-left:10px;
+}
+
+article{
+}
+
+.main_content, .content_title, .content_explain {
+	margin-left:20%;
+	margin-right:20%;
+	justify-content:center;
+	display:flex;
+}
+
+.main_content > img{
+	width:25%;
+	height:200px;
+	margin-left:5%;
+	margin-right:5%;
+	margin-top:100px;
+}
+
+.content_title > span{
+	margin-left:15%;
+	margin-right:15%;
+	margin-top:30px;
+	text-align:center;
+	background:green;
+}
+
+.content_explain > span{
+	margin-left:15%;
+	margin-right:15%;
+	margin-top:30px;
+	text-align:center;
+	background:blue;
+}
+
+.slide {
+	display:flex;
+	width:100vm;
+	height:440px;
+	justify-content:center;
+	background:pink;
+}
+
+.slide > img{
+	width:100vm;
+	height:440px;
+}
+
+.submenu {
+  list-style-type: none;
+  display: none;
+}
