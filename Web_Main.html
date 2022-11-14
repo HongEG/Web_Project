@@ -26,6 +26,20 @@
 			x[index-1].style.display = "block";
 			setTimeout(slideShow, 4000); 
 			}
+			function collapse(element) {
+            var before = document.getElementsByClassName("active")[0]             
+            if (before && document.getElementsByClassName("active")[0] != element) {  
+                before.nextElementSibling.style.maxHeight = null;  
+                before.classList.remove("active");               
+            }
+            element.classList.toggle("active");       
+            var content = element.nextElementSibling;
+            if (content.style.maxHeight != 0) {       
+                content.style.maxHeight = null;       
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";  
+            }
+        }
 		</script>
     <body>
 			<header>
@@ -52,6 +66,23 @@
 				</nav>
 				<aside>
 				<!--제품 리스트 작성부분-->
+				<button type="button" class="collapsible" onclick="collapse(this);">테블릿</button>
+				<div class="content">
+					<p><a href="univstore.com">Apple</a></p>
+					<p><a href="univstore.com">Samsung</a></p>
+					<p><a href="univstore.com">Accessory</a></p>
+				</div>
+				<button type="button" class="collapsible" onclick="collapse(this);">휴대폰</button>
+				<div class="content">
+					<p><a href="univstore.com">자급제</a></p>
+					<p><a href="univstore.com">Accessory</a></p>
+				</div>
+				<button type="button" class="collapsible" onclick="collapse(this);">노트북</button>
+				<div class="content">
+					<p><a href="univstore.com">Apple</a></p>
+					<p><a href="univstore.com">Samsung</a></p>
+					<p><a href="univstore.com">Accessory</a></p>
+				</div>
 				</aside>
 				<section>
 				<!--제풍 상세-->
