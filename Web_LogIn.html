@@ -1,62 +1,32 @@
 <!DOCTYPE html>
+<html>
 <head>
-  <style>
-    body {
+<title>로그인 기능</title>
+<style>
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
   margin: -20px 0 50px;
-
   background-color: white;
   
-
 }
-.main {
-    width: 250px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-}
-.logo {
-    margin-top: 0px;
-    margin-bottom: 40px;
-}
-#login {
-    width: 100%;
-    background-color: pink;
-    border-color: transparent;
-    color: white;
-}
-.account {
-    display: block;
-    margin-bottom: 3px;
-    padding: 3px;
-    border: 1px solid lightgray;
-    border-radius: 3px;
-}
-#alert {
-    border-color: transparent;
-}
-  </style>
-  </head>
+</style>
+</head>
 <body>
-    <div class="main">
-        <h1 class="logo"><a href="메인사이트링크">사이트이름</a></h1>
-        <div class="container">
-            <input type="text" placeholder="아이디" id="id" class="account">
-            <input type="password" placeholder="비밀번호" id="password" class="account">
-            <i class="fa fa-eye fa-lg"></i><br>
-            <button id="login" class="account">로그인</button>
-          <input type="checkbox">아이디 저장<br>
-         <a href="회원가입링크">회원가입<a>
-         <p id="alert" class="account"> </p>
-        </div>
-    </div>   
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+    <form action="#">
+<h1><a href="메인사이트링크">사이트 이름</a></h1>
+<form name="fo" method="get">
+<input type="text" size="15" placeholder="user ID"><br>
+<input type="password" size="15" placeholder="Password">
+<i class="fa fa-eye fa-lg"></i><br>
+<input type="checkbox">아이디 저장<br>
+<input type="submit" value="로그인" ><br><hr>
+"사이트 이름"이 처음이신가요? <a href="회원가입링크">회원가입<a>
+</form>
 </body>
 </html>

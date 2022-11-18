@@ -13,30 +13,20 @@ header{
 	margin-top:40px;
 	height:80px;
 }
-.Main_bg
-{
-    background-image:url("image/rp.png");
-		background-repeat: repeat;
-		width : 100vw;
-    height : 600px;
-		background:gray;
-		
-}
 
 .Main_icon{
-	width:500px;
+	width:20%;
 	line-height:80px;
-	background:white;
-	border:2px solid #F0F
+	background:pink;
 }
 
 .usAccount{
 	display:flex;
-	width:2060px;
+	width:80%;
 	justify-content:flex-end;
 	line-height:80px;
-	background:white;
-	border:2px solid #F0F
+	background:purple;
+	margin-bottom:0px;
 }
 
 .usAccount > li {
@@ -49,63 +39,105 @@ header{
 	margin-right:30px;
 }
 
-.usAccount > form > input{
+.usAccount > form > li > input, a{
 	border:none;
-	width:50px;
-	height:40px;
-	background:rgbas(0,0,0,0.0);
-	color:#fff;
-	padding-left:10px;
+	width:100%;
+	height: 50px;
+	margin-top: 10px;
 }
 
-article{
-}
-
-.main_content, .content_title, .content_explain {
-	margin-left:20%;
-	margin-right:20%;
-	justify-content:center;
+nav{
 	display:flex;
-}
-
-.main_content > img{
-	width:25%;
-	height:200px;
-	margin-left:5%;
-	margin-right:5%;
-	margin-top:100px;
-}
-
-.content_title > span{
-	margin-left:15%;
-	margin-right:15%;
-	margin-top:30px;
-	text-align:center;
-	background:green;
-}
-
-.content_explain > span{
-	margin-left:15%;
-	margin-right:15%;
-	margin-top:30px;
-	text-align:center;
-	background:blue;
+	width:100vm;
+	height:600px;
+	justify-content:center;
+	background:gray;
 }
 
 .slide {
-	display:flex;
-	width:100vm;
-	height:440px;
-	justify-content:center;
-	background:pink;
+	margin-top:40px;
 }
 
 .slide > img{
-	width:100vm;
-	height:440px;
+	width:1000px;
+	height:600px;
 }
 
 .submenu {
   list-style-type: none;
   display: none;
+}
+
+aside {
+	width:20%;
+	height:1500px;
+	background:blue;
+	float:left;
+}
+
+section {
+	width:80%;
+	height:1500px;
+	background:skyblue;
+	float:right;
+}
+
+.Item_List {
+	margin-top:80px;
+	margin-left:40px;
+	margin-right:40px;
+	grid-template-columns:1fr 1fr 1fr 1fr;
+	grid-template-rows:350px 350px 350px 350px;
+	display:grid;
+	column-gap:15px;
+	row-gap:15px;
+}
+
+.Item {
+	background:white;
+}
+
+.Item_image {
+	width:100%;
+	height:80%;
+	background:orange;
+}
+
+.Item_explain {
+	width:100%;
+	height:15%;
+	margin-top:10px;
+	background:green;
+}
+.collapsible {
+	background-color: skyblue;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+}
+.active,
+.collapsible:hover {
+	background-color: black;
+}
+.content {
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: white;
+}
+.collapsible:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+.active:after {
+	content: "\2212";
 }
