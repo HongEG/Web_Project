@@ -18,6 +18,19 @@ header{
 	width:20%;
 	line-height:80px;
 	border: 2px solid black;
+	border-top: 4px solid black;
+}
+.Main_icon > img {
+	width:80px;
+	height:70px;
+	margin-bottom:40px;
+}
+
+.Main_icon > span {
+	margin-left:15%;
+	font-weight:bold;
+	font-size:60px;
+	
 }
 
 .usAccount{
@@ -26,11 +39,8 @@ header{
 	justify-content:flex-end;
 	line-height:80px;
 	border: 2px solid black;
+	border-top: 4px solid black;	
 	margin-bottom:0px;
-}
-
-.usAccount > li > btn btn-outline-success {
-	position: absolute; top: 100px; left: 80px;
 }
 
 .usAccount > li {
@@ -39,17 +49,24 @@ header{
 }
 
 .usAccount > form > li {
-	margin-left:30px;
-	margin-right:30px;
+	margin-left:30px;	margin-right:30px;
 }
 
-.usAccount > form > li > input, a{
+.usAccount > form > li > a{
 	border:none;
 	width:100%;
 	height: 40px;
 	margin-top: 20px;
 }
 
+.usAccount > form > li > input{
+	border:none;
+	width:100%;
+	height: 40px;
+	margin-top: 20px;
+	
+	border: 2px solid black;
+}
 nav{
 	display:flex;
 	width:100vm;
@@ -60,7 +77,7 @@ nav{
 
 .slide > img{
 	width:1920px;
-	height:678px;
+	height:676px;
 }
 
 .submenu {
@@ -100,7 +117,7 @@ section {
 }
 
 .Item_image {
-	border: 1px solid black;
+	
 }
 
 .Item_image > img{
@@ -108,17 +125,19 @@ section {
 	height:230px;
 	margin-left:30px;
 	margin-top:20px;
-	margin-bottom:20px;
 	object-fit: contain;
 	object-fit:fill;
-	border: 1px solid black;
 }
 
 .Item_explain {
+	display: flex;
+  justify-content: center;
+	align-items: center;
 	width:350px;
-	height:60px;
+	height:80px;
 	margin-top:10px;
-	border: 1px solid black;
+	font-weight:bold;
+	white-space:normal;
 }
 .collapsible {
 	border: 2px solid black;
@@ -133,7 +152,7 @@ section {
 }
 .active,
 .collapsible:hover {
-	background-color: black;
+	background-color: white;
 }
 .content {
 	padding: 0 18px;
@@ -179,29 +198,8 @@ https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939
 }
 
 .pagi {
-	width:80%;
+	width:100%;
 	float:right;
-}
-
-.pagination {
-	justify-content:center;
-	display:flex;
-}
-
-.pagination li {
-	margin: 0 1px;
-	display:flex;
-}
-
-.pagination a {
-	display: block;
-	padding: .5em 1em;
-	border: 1px solid #999;
-	border-radius: .2em;
-	text-decoration: none;
-}
-
-.pagination a[aria-current="page"] {
-	background-color: #333;
-	color: #fff;
+	height:100px;
+	background:red;
 }
