@@ -17,7 +17,7 @@ header{
 .Main_icon{
 	width:20%;
 	line-height:80px;
-	background:pink;
+	border: 2px solid black;
 }
 
 .usAccount{
@@ -25,8 +25,12 @@ header{
 	width:80%;
 	justify-content:flex-end;
 	line-height:80px;
-	background:purple;
+	border: 2px solid black;
 	margin-bottom:0px;
+}
+
+.usAccount > li > btn btn-outline-success {
+	position: absolute; top: 100px; left: 80px;
 }
 
 .usAccount > li {
@@ -42,25 +46,21 @@ header{
 .usAccount > form > li > input, a{
 	border:none;
 	width:100%;
-	height: 50px;
-	margin-top: 10px;
+	height: 40px;
+	margin-top: 20px;
 }
 
 nav{
 	display:flex;
 	width:100vm;
-	height:600px;
+	height:680px;
 	justify-content:center;
-	background:gray;
-}
-
-.slide {
-	margin-top:40px;
+	border: 2px solid black;
 }
 
 .slide > img{
-	width:1000px;
-	height:600px;
+	width:1920px;
+	height:678px;
 }
 
 .submenu {
@@ -70,15 +70,15 @@ nav{
 
 aside {
 	width:20%;
-	height:1500px;
-	background:blue;
+	height:1600px;
+	border: 2px solid black;
 	float:left;
 }
 
 section {
 	width:80%;
-	height:1500px;
-	background:skyblue;
+	height:1600px;
+	border: 2px solid black;
 	float:right;
 }
 
@@ -95,23 +95,34 @@ section {
 
 .Item {
 	background:white;
+	border: 2px solid black;
+	
 }
 
 .Item_image {
-	width:100%;
-	height:80%;
-	background:orange;
+	border: 1px solid black;
+}
+
+.Item_image > img{
+	width:290px;
+	height:230px;
+	margin-left:30px;
+	margin-top:20px;
+	margin-bottom:20px;
+	object-fit: contain;
+	object-fit:fill;
+	border: 1px solid black;
 }
 
 .Item_explain {
-	width:100%;
-	height:15%;
+	width:350px;
+	height:60px;
 	margin-top:10px;
-	background:green;
+	border: 1px solid black;
 }
 .collapsible {
-	background-color: skyblue;
-	color: white;
+	border: 2px solid black;
+	color: black;
 	cursor: pointer;
 	padding: 18px;
 	width: 100%;
@@ -167,23 +178,19 @@ https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939
 	white-space: nowrap;
 }
 
-nav {
-	display: flex;
-	justify-content: center;
-	border-top: 1px solid #eee;
-	margin-top: 1em;
-	padding-top: .5em;
+.pagi {
+	width:80%;
+	float:right;
 }
 
 .pagination {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
+	justify-content:center;
+	display:flex;
 }
 
 .pagination li {
 	margin: 0 1px;
+	display:flex;
 }
 
 .pagination a {
