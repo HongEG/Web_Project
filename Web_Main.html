@@ -11,7 +11,8 @@
     <title>Web</title>
   
     </head>
-		<script>			var index = 0;
+		<script>			
+			var index = 0;
 			window.onload = function(){
 				slideShow();
 			}
@@ -43,7 +44,6 @@
                 content.style.maxHeight = content.scrollHeight + "px";  
             }
         }
-
 		function showPopup(hasFilter) {
 	const popup = document.querySelector('#popup');
   
@@ -60,19 +60,20 @@ function closePopup() {
 	const popup = document.querySelector('#popup');
   popup.classList.add('hide');
 }
+
 		</script>
     <body>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 			<header>
         <div class="Main_icon">
-					<img src="https://www.kindpng.com/picc/m/114-1141975_electrical-electronics-icon-free-download-png-electricians-electrical.png">HS.lnc</img>
+			<a href="Web_Main.html"><img src="https://i.ibb.co/gZsLnZj/HS-Inc.png" alt="HS-Inc"></a>
 			  </div>
           <ul class="usAccount">
 						<form>
 							<li><input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 						</form>
-            <li><a href="login.html"><i class="fa-regular fa-user"></i></a></li>
+            <li><a href="Web_Login.html"><i class="fa-regular fa-user"></i></a></li>
           </ul>
 				</header>
 				<nav>
@@ -91,108 +92,720 @@ function closePopup() {
 				<!--제품 리스트 작성부분-->
 				<button type="button" class="collapsible" onclick="collapse(this);">테블릿</button>
 				<div class="content">
-					<p><a href="univstore.com">Apple</a></p>
-					<p><a href="univstore.com">Samsung</a></p>
-					<p><a href="univstore.com">Accessory</a></p>
-
-				</div>
+					<p><button onclick="changeouter()">Apple</button></p>
+						<script>	function changeouter() {
+							var gfg = document.getElementById("d");
+							gfg.outerHTML ="Tab_Apple.html"
+		}
+	</script>
+					<p><button onclick="changeouter()">Samsung</button></p>
+						<script>	function changeouter() {
+							var gfg = document.getElementById("d");
+							gfg.outerHTML ="Tab_Samsung.html"
+		}
+	</script>
+					<p><button onclick="changeouter()">Accessory</button></p>
+						<script>	function changeouter() {
+							var gfg = document.getElementById("d");
+							gfg.outerHTML ="Tab_Accessory.html"
+		}
+	</script>				
+	</div>
 				<button type="button" class="collapsible" onclick="collapse(this);">휴대폰</button>
 				<div class="content">
-					<p><a href="univstore.com">자급제</a></p>
-					<p><a href="univstore.com">Accessory</a></p>
+					<p><button onclick="changeouter()">자급제</button></p>
+					<script>	function changeouter() {
+						var gfg = document.getElementById("d");
+						gfg.outerHTML ="Ph_자급제.html"
+	}
+</script>
+					<p><button onclick="changeouter()">Accessory</button></p>
+					<script>	function changeouter() {
+						var gfg = document.getElementById("d");
+						gfg.outerHTML ="Ph_Accessory.html"
+	}
+</script>
 				</div>
 				<button type="button" class="collapsible" onclick="collapse(this);">노트북</button>
 				<div class="content">
-					<p><a href="univstore.com">Apple</a></p>
-					<p><a href="univstore.com">Samsung</a></p>
-					<p><a href="univstore.com">Accessory</a></p>
+					<p><button onclick="changeouter()">Apple</button></p>
+					<script>	function changeouter() {
+						var gfg = document.getElementById("d");
+						gfg.outerHTML ="Nt_Apple.html"
+	}
+</script>
+					<p><button onclick="changeouter()">Samsung</button></p>
+					<script>	function changeouter() {
+						var gfg = document.getElementById("d");
+						gfg.outerHTML ="Nt_Samsung.html"
+	}
+</script>
+					<p><button onclick="changeouter()">Accessory</button></p>
+					<script>	function changeouter() {
+						var gfg = document.getElementById("d");
+						gfg.outerHTML ="Nt_Accessory.html"
+	}
+</script>
 				</div>
 				</aside>
 				<section>
 				<!--제품 상세-->
 					<article>
+						<div id="d">
 						<div class="Item_List">
 							<div class="Item">
 								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphonese-202203?wid=340&hei=264&fmt=p-jpg&qlt=95&.v=1646415838921">
 								</div>
-								<div class="Item_explain">iPhone SE From 489$ or 17.8$ for 24mo. <!--팝업창--><!--<br><button onclick="showPopup(false)">상세보기</button></div>-->
-								<!--<div id="popup" class="hide">
-									<div class="content">
-									  <p>
-										제품 상세 설명창
-									  </p>
-									  <button onclick="closePopup()">닫기</button>
-									</div>
-								  </div>-->
+								<div class="Item_explain">iPhone SE From 489$ or 17.8$ for 24mo. 
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+										<div id="popup" class="hide">
+ 											<div class="content">
+    											<h3>iPhone SE From 489$ or 17.8$ for 24mo.</h3><br>
+												<img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphonese-202203?wid=340&hei=264&fmt=p-jpg&qlt=95&.v=1646415838921"><br>
+    											<p>제품설명</p>
+												<button onclick="closePopup()">닫기</button>
+ 											 </div>
+										</div>
 							</div>
 							</div>
 							<div class="Item">
 								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/04/27/9c9b9f70-7bf7-4b51-bdb4-090a7f7572c0.png?$PF_PRD_PNG$">
 								</div>
 								<div class="Item_explain">갤럭시북 Pro 33.7 cm Core™ i3 / 256 GB NVMe
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+										<div id="popup" class="hide">
+											<div class="content">
+												<h3>갤럭시북 Pro 33.7 cm Core™ i3 / 256 GB NVMe</h3><br>
+												<img src="https://images.samsung.com/kdp/goods/2022/04/27/9c9b9f70-7bf7-4b51-bdb4-090a7f7572c0.png?$PF_PRD_PNG$">
+												<p> 제품 설명</p>
+												<button onclick="closePopup()">닫기</button>
+											</div>
+										</div>
 								</div>
 							</div>	
 							<div class="Item">
 								<div class="Item_image"><img src="https://images.samsung.com/is/image/samsung/sec-spa-kmg1pub-spa-kmg1pub-thumb-116100234?$PF_PRD_PNG$"></div>
-								<div class="Item_explain">게이밍 마우스블랙</div>
+								<div class="Item_explain">게이밍 마우스블랙
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+										<div id="popup" class="hide">
+											<div class="content">
+												<p> 제품 상세 설명창</p>
+												<button onclick="closePopup()">닫기</button>
+											</div>
+										</div>
+								</div>
 							</div>
 							<div class="Item">
 								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MD826?wid=532&hei=582&fmt=png-alpha&.v=1566858915905"></div>
-								<div class="Item_explain">Lightning Digital AV Adapter</div>
+								<div class="Item_explain">Lightning Digital AV Adapter
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+										<div id="popup" class="hide">
+											<div class="content">
+												<p> 제품 상세 설명창</p>
+												<button onclick="closePopup()">닫기</button>
+											</div>
+										</div>
+								</div>
 							</div>							
 							<div class="Item">
 								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-pro-14-16-202206?wid=600&hei=500&fmt=p-jpg&qlt=95&.v=1653498040386"></div>
-								<div class="Item_explain">MacBook Pro13``</div>
+								<div class="Item_explain">MacBook Pro13``
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+							</div>
 							</div>
 							<div class="Item">
 								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2021/08/12/14c96b4c-7e8e-46b1-87cf-edc4843631e5.png?$PF_PRD_PNG$"></div>
-								<div class="Item_explain">S펜 폴드 에디션 (갤럭시 Z 폴드4, 갤럭시 Z 폴드3 호환)</div>
+								<div class="Item_explain">S펜 폴드 에디션 (갤럭시 Z 폴드4, 갤럭시 Z 폴드3 호환)
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+							</div>
 							</div>
 							<div class="Item">
 								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone14pro-202209?wid=340&hei=264&fmt=p-jpg&qlt=95&.v=1663611329492"></div>
-								<div class="Item_explain">iphone 14 pro</div>
+								<div class="Item_explain">iphone 14 pro
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+							</div>
 							</div>
 							<div class="Item">
 								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-air-202110?wid=600&hei=500&fmt=p-jpg&qlt=95&.v=1664576115052"></div>
-								<div class="Item_explain">iPad mini</div>
+								<div class="Item_explain">iPad mini
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+							</div>
 							</div>
 							<div class="Item">
 								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/05/12/41a1864c-47a3-4e20-9953-c62255ed4417.png?$PF_PRD_PNG$"></div>
-								<div class="Item_explain">갤럭시 북2 Pro 360 33.7 cm Core™ i7 / 1 TB NVMe SSD</div>
+								<div class="Item_explain">갤럭시 북2 Pro 360 33.7 cm Core™ i7 / 1 TB NVMe SSD
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+							</div>
 							</div>
 							<div class="Item">
 								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2021/12/29/dc7c9cc8-3904-4953-935c-04f004ef3daf.png?$PF_PRD_PNG$"></div>
-								<div class="Item_explain">멀티 포트 어댑터(2022)</div>
+								<div class="Item_explain">멀티 포트 어댑터(2022)
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+							</div>
 							</div>							
 							<div class="Item">
 								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MX3L2?wid=532&hei=582&fmt=png-alpha&.v=1631228408000"></div>
-								<div class="Item_explain">Smart keyboard for iPad 9th generation</div>
+								<div class="Item_explain">Smart keyboard for iPad 9th generation
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+							</div>
 							</div>
 							<div class="Item" >
 								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-air-202206?wid=600&hei=500&fmt=p-jpg&qlt=95&.v=1653499620093"></div>
-								<div class="Item_explain">MacBook Air with m1 chip</div>
+								<div class="Item_explain">MacBook Air with m1 chip
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
 							</div>
-							<div class="Item">
-								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-air-202206?wid=600&hei=500&fmt=p-jpg&qlt=95&.v=1653499620093"></div>
-								<div class="Item_explain">MacBook Air with m1 chip</div>
 							</div>
-							<div class="Item">
-								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-air-202206?wid=600&hei=500&fmt=p-jpg&qlt=95&.v=1653499620093"></div>
-								<div class="Item_explain">MacBook Air with m1 chip</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/02/25/892d7321-0585-413e-bf3c-ef3d2634ca99.png?$PF_PRD_PNG$"></div>
+								<div class="Item_explain">갤럭시 탭 S8 화면보호 강화유리
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
 							</div>
-							<div class="Item">
-								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-air-202206?wid=600&hei=500&fmt=p-jpg&qlt=95&.v=1653499620093"></div>
-								<div class="Item_explain">MacBook Air with m1 chip</div>
 							</div>
-							<div class="Item">
-								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-air-202206?wid=600&hei=500&fmt=p-jpg&qlt=95&.v=1653499620093"></div>
-								<div class="Item_explain">MacBook Air with m1 chip</div>
-							</div>							
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2021/12/16/70dcae32-52cc-4060-bad4-8ae7a9b192ba.png?$PF_PRD_PNG$"></div>
+								<div class="Item_explain">삼성 게이밍 헤드셋
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+							</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-pro-13-202206?wid=600&hei=500&fmt=p-jpg&qlt=95&.v=1665082744007"></div>
+								<div class="Item_explain">MacBook Air wit M2 chip
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+							</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-card-40-ipad-mini-202109?wid=400&hei=500&fmt=p-jpg&qlt=95&.v=1630457637000"></div>
+								<div class="Item_explain">iPad 9th generation
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+							</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/04/27/11004fec-3a1d-4b42-8538-2a6848d144c3.png?$PF_PRD_PNG$
+									"></div>
+								<div class="Item_explain">갤럭시 북 39.6 cm Pentium® Gold / 128 GB
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+							</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/10/25/ec…1ff-4fbf-9139-d77c8f510b57.png?$PD_GALLERY_L_PNG$"></div>
+								<div class="Item_explain">갤럭시 탭 S8 (Wi-Fi)
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+							</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/08/02/06…df9-4fb8-977c-79ebb79c0d8b.png?$PD_GALLERY_L_PNG$"></div>
+								<div class="Item_explain">갤럭시z폴드4
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/01/25/c8…81d-4e72-a764-3f9dca1ca0a8.png?$PD_GALLERY_L_PNG$"></div>
+								<div class="Item_explain">갤럭시S22자급제
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-card-40-air-202203?wid=400&hei=500&fmt=p-jpg&qlt=95&.v=1644963446761"></div>
+								<div class="Item_explain">iPad pro
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/08/11/37adecde-b53c-440f-928c-5ae1001f2c07.png?$PF_PRD_KDP_PNG$"></div>
+								<div class="Item_explain">갤럭시 Z 폴드4 스크린 프로텍터
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/02/15/85f82be9-3d16-4ca7-b1a9-32191def4b74.png?$PF_PRD_KDP_PNG$"></div>
+								<div class="Item_explain">갤럭시 S22 Ultra S펜
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPU63?wid=532&hei=582&fmt=png-alpha&.v=1661471392701"></div>
+								<div class="Item_explain">iPhone 14 Pro Clear Case with MagSafe
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/04/27/0714ece8-16c6-4999-8a91-021c30ebc650.png?$PF_PRD_PNG$"></div>
+								<div class="Item_explain">갤럭시 북2 Pro 39.6 cm Core™ i7 / 512 GB NVMe
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphonese-202203?wid=340&hei=264&fmt=p-jpg&qlt=95&.v=1646415838921"></div>
+								<div class="Item_explain">iphone12
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone13-202209?wid=340&hei=264&fmt=p-jpg&qlt=95&.v=1661958176452"></div>
+								<div class="Item_explain">iphone13
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-card-40-ipad-202109?wid=400&hei=500&fmt=p-jpg&qlt=95&.v=1630640992000"></div>
+								<div class="Item_explain">iPad 10th generation
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-imac-24-202108?wid=490&hei=500&fmt=jpeg&qlt=95&.v=1625868688000"></div>
+								<div class="Item_explain">iMac 24``
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU7T2_GEO_US?wid=532&hei=582&fmt=png-alpha&.v=1542406417329"></div>
+								<div class="Item_explain">20W USB-C Power Adapter
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HLST2?wid=532&hei=582&fmt=png-alpha&.v=1596135470000"></div>
+								<div class="Item_explain">Twelve South Curve Stand for Macbook
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/02/10/10dc291e-148f-46d3-ba78-0370c6ae7a21.png?$PF_PRD_PNG$"></div>
+								<div class="Item_explain">갤럭시 탭 S8 북커버 (탭 S7 호환)
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK0C2?wid=532&hei=582&fmt=png-alpha&.v=1564075356758"></div>
+								<div class="Item_explain">Apple Pencil 1
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2021/07/22/5d8f547e-4f9b-4392-aeae-8397fbe2dc6d.png?$PF_PRD_KDP_PNG$"></div>
+								<div class="Item_explain">갤럭시 탭 S7 FE 스타일러스 펜
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/02/03/61…7d2-434d-9e39-86751856e184.png?$PD_GALLERY_L_PNG$"></div>
+								<div class="Item_explain">갤럭시S22+자급제
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/10/25/49…eb3-4bb8-a8ea-4b3396971826.png?$PD_GALLERY_L_PNG$"></div>
+								<div class="Item_explain">갤럭시 탭 S8+ (Wi-Fi)
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-card-40-iphone14-202209?wid=340&hei=264&fmt=p-jpg&qlt=95&.v=1661958160674"></div>
+								<div class="Item_explain">iphoneSE
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2021/12/23/b5…69e-4dd6-a7a9-65a3d78181bc.png?$PD_GALLERY_L_PNG$"></div>
+								<div class="Item_explain">갤럭시 탭 A8 (Wi-Fi)
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/01/26/37…d10-43f1-9b61-6f50b857c2e4.png?$PD_GALLERY_L_PNG$"></div>
+								<div class="Item_explain">갤럭시S22 Ultra 자급제
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/10/24/9f…4a2-4823-b91a-1775203a9f77.png?$PD_GALLERY_L_PNG$"></div>
+								<div class="Item_explain">갤럭시 Z 플립4 자급제
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-card-40-pro-202210?wid=340&hei=264&fmt=p-jpg&qlt=95&.v=1664578794100"></div>
+								<div class="Item_explain">iphone14
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/10/24/b4…8ec-4187-a475-36f8feefb47a.png?$PD_GALLERY_L_PNG$"></div>
+								<div class="Item_explain">갤럭시 탭 S8 Ultra (Wi-Fi)
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2021/08/17/28…500-4c86-a389-c656eddc133f.png?$PD_GALLERY_L_PNG$"></div>
+								<div class="Item_explain">갤럭시 탭 S7 FE (Wi-Fi)
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDT3?wid=532&hei=582&fmt=png-alpha&.v=1664481896795"></div>
+								<div class="Item_explain">Smart Folio for iPad 10th generation - Watermelon
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MMMQ3?wid=532&hei=582&fmt=png-alpha&.v=1645138486301"></div>
+								<div class="Item_explain">Magic Mouse
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://images.samsung.com/kdp/goods/2022/05/12/60991936-4543-4e42-bb75-662c07c96d33.png?$PF_PRD_PNG$"></div>
+								<div class="Item_explain">갤럭시 북2 Pro 360 39.6 cm Core™ i7 / 1 TB NVMe
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-card-40-ipad-202210?wid=340&hei=264&fmt=p-jpg&qlt=95&.v=1665519729404"></div>
+								<div class="Item_explain">iPad Air
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HPBP2?wid=532&hei=582&fmt=png-alpha&.v=1602804979000
+"></div>
+								<div class="Item_explain">Tech21 Evo Clear Case for MacBook pro 2020
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Item" >
+								<div class="Item_image"><img src=""></div>
+								<div class="Item_explain">MacBook Air with m1 chip
+									<!--팝업창--><button onclick="showPopup(false)">상세보기</button>
+
+									<div id="popup" class="hide">
+										<div class="content">
+											<p> 제품 상세 설명창</p>
+											<button onclick="closePopup()">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
 						</div>
+					</div>
 					</article>
 				</section>
 				
     </body>
+	
 				<footer class="footer">
 					<div class="container text-center">
 					<i class="fa-brands fa-facebook"></i>
@@ -207,7 +820,7 @@ function closePopup() {
 					</div>
 					<div class="copyright">
 					<p>
-						Copyright 2022 &copy; by HongEG & Iskandarov Khasan & LeeChaeUn
+						Copyright 2022 &copy; by HongEG & Iskandarov Khasan & LeeChaeEun
 					</p>
 					</div>
 				</footer>
