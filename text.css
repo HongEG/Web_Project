@@ -14,12 +14,12 @@ header{
 	height:80px;
 }
 
-.Main_icon{
+/*.Main_icon{
 	width:20%;
 	line-height:80px;
 	border: 2px solid black;
 	border-top: 4px solid black;
-}
+}*/
 .Main_icon > img {
 	width:80px;
 	height:70px;
@@ -124,9 +124,9 @@ aside::after{
 	
 }
 
-.Item_image {
+/*.Item_image {
 	
-}
+}*/
 
 .Item_image > img{
 	width:290px;
@@ -244,9 +244,10 @@ footer {
 	text-align: center;
 	color: #fff;
   }
+  
 
 /*제품팝업창*/
-/*button {
+button {
 	height: 2.5em;
 	cursor: pointer;
   }
@@ -274,8 +275,14 @@ footer {
   }
   
   #popup .content {
-	padding: 20px;
+	padding: 500px;
+	padding-top: 70px;
+	text-align: center;
 	background: #fff;
 	border-radius: 5px;
 	box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
-  }-->
+  }
+  /*.footer{
+	position : fixed;
+	bottom : 0;
+  }*/
