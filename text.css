@@ -87,7 +87,7 @@ nav{
 
 aside {
 	width:20%;
-	height:1600px;
+	height:80%;
 	border: 2px solid black;
 	float:left;
 }
@@ -95,7 +95,7 @@ aside {
 
 section {
 	width:80%;
-	height:1600px;
+	height:80%;
 	border: 2px solid black;
 	float:right;
 }
@@ -208,7 +208,7 @@ https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939
 footer {
 	clear: both;
 	padding-top: 10px;
-	height: 25vh;
+	height: 20vh;
 	width: 100vw;
 	background-color: black
   }
