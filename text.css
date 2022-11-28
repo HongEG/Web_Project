@@ -375,6 +375,12 @@ button {
 	border:2px solid black;
 }
 
+.search_img > img {
+	width: 206px;
+	height:146px;
+}
+
+
 .search_explain {
 	width:210px;
 	height:50px;
@@ -383,7 +389,7 @@ button {
 	font-weight:bold;
 	white-space:normal;
 	border:2px solid black;
-	
+	text-align:center;
 }
 
 label {
