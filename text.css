@@ -14,16 +14,16 @@ header{
 	height:80px;
 }
 
-/*.Main_icon{
+.Main_icon{
 	width:20%;
 	line-height:80px;
 	border: 2px solid black;
 	border-top: 4px solid black;
-}*/
-.Main_icon > img {
-	width:80px;
-	height:70px;
-	margin-bottom:40px;
+}
+.Main_icon > a > img {
+	width:50%;
+	margin-left:20%;
+	height:65px;
 }
 
 .Main_icon > span {
@@ -116,25 +116,23 @@ aside::after{
 	display:grid;
 	column-gap:15px;
 	row-gap:15px;
+
+}
+.Item_details {
+	display:flex;
+	justify-content:center;
 }
 
 .Item {
 	background:white;
 	border: 2px solid black;
-	
 }
-
-/*.Item_image {
-	
-}*/
 
 .Item_image > img{
 	width:290px;
 	height:230px;
 	margin-left:30px;
 	margin-top:20px;
-	object-fit: contain;
-	object-fit:fill;
 }
 
 .Item_explain {
@@ -142,13 +140,12 @@ aside::after{
   justify-content: center;
 	align-items: center;
 	width:350px;
-	height:80px;
+	height:40px;
 	margin-top:10px;
 	font-weight:bold;
 	white-space:normal;
 }
 .collapsible {
-	border: 2px solid black;
 	color: black;
 	cursor: pointer;
 	padding: 18px;
@@ -160,7 +157,7 @@ aside::after{
 }
 .active,
 .collapsible:hover {
-	background-color: white;
+	background-color: #c8c8c8;
 }
 .content {
 	padding: 0 18px;
@@ -168,6 +165,7 @@ aside::after{
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 	background-color: white;
+	border:none;
 }
 .collapsible:after {
 	content: '\002B';
@@ -175,6 +173,7 @@ aside::after{
 	font-weight: bold;
 	float: right;
 	margin-left: 5px;
+	border:none;
 }
 .active:after {
 	content: "\2212";
@@ -250,6 +249,7 @@ footer {
 button {
 	height: 2.5em;
 	cursor: pointer;
+	border:none;
   }
   
   #popup {
@@ -286,3 +286,157 @@ button {
 	position : fixed;
 	bottom : 0;
   }*/
+	
+
+.search_menu {
+	width:100vm;
+	height:150vh;
+	display:flex;
+	justify-content:center;
+	position : relative;
+	
+}
+
+.search_option {
+	width:100%;
+	margin:auto;
+	margin-top:10%;
+	justify-content:right;
+}
+
+
+
+.search_option > details > summary {
+	width:100%;
+	background:#c8c8c8;
+	color:#fff;
+	padding:10px;
+	outline:0;
+	border-radius:5px;
+	cursor:pointer;
+	transition:background 0.5s;
+	text-align:right;
+	box-shadow: 1px 1px 2px gray;
+	
+}
+.search_option > details > summary::-webkit-details-marker {
+	background:#c8c8c8;
+	color:#fff;
+	background-size:contain;
+	transform:rotate3d(0, 0, 1, 90deg);
+	transition:transform 0.25s;
+}
+.search_option > details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
+.search_option > details[open] > summary {background:#c8c8c8;}
+.search_option > details[open] > summary ~ * { animation:reveal 0.5s;}
+
+.tpt {
+	width:100%;
+	background:#c8c8c8;
+	color:#fff;
+	margin:5px 0 10px;
+	padding:5px 10px;
+	line-height:25px;
+	border-radius:5px;
+	box-shadow: 1px 1px 2px gray;
+	text-align:center;
+}
+
+.tpt > table {
+	width:100%;
+}
+
+
+@keyframes reveal {
+    from { opacity:0; transform:translate3d(0, -30px, 0); }
+    to { opacity:1; transform:translate3d(0, 0, 0); }
+}
+
+.search_result {
+	margin-top:10%;
+	width:100%;
+}
+
+.search_item {
+	margin:20px;
+	grid-template-columns:1fr 1fr 1fr 1fr;
+	grid-template-rows:250px 250px 250px;
+	display:grid;
+	column-gap:15px;
+	row-gap:15px;
+}
+
+.search_img {
+	width:210px;
+	height:150px;
+	margin:20px;
+	object-fit: contain;
+	object-fit:fill;
+	border:2px solid black;
+}
+
+.search_explain {
+	width:210px;
+	height:50px;
+	margin-top:10px;
+	margin-left:20px;
+	font-weight:bold;
+	white-space:normal;
+	border:2px solid black;
+	
+}
+
+label {
+  font-size: 18px;
+  line-height: 2rem;
+  padding: 0.2em 0.4em;
+}
+
+[type="submit"] {
+	border:1px solid black;
+	background-color:#c8c8c8;
+	border-radius: 10%;
+	color:#fff;
+}
+
+
+span {
+  vertical-align: middle;
+	color:#fff;
+}
+
+[type="radio"] {
+  vertical-align: middle;
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 1.25em;
+  height: 1.25em;
+  transition: border 0.5s ease-in-out;
+}
+
+[type="radio"]:checked {
+  border: 0.4em solid gray;
+}
+
+[type="radio"]:focus-visible {
+  outline-offset: max(2px, 0.1em);
+  outline: max(2px, 0.1em) dotted tomato;
+}
+
+[type="radio"]:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+  cursor: pointer;
+}
+
+[type="radio"]:disabled {
+  background-color: lightgray;
+  box-shadow: none;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+[type="radio"]:disabled + span {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
